@@ -1,3 +1,4 @@
+cat > app/page.tsx <<'EOF'
 "use client";
 
 import { useState } from "react";
@@ -50,9 +51,7 @@ export default function Home() {
               background: "linear-gradient(135deg, #FF4F9A, #8B5CF6)",
               color: "#ffffff",
               fontSize: "22px",
-              boxShadow: "0 10px 24px rgba(255, 79, 154, 0.22)",
             }}
-            aria-label="AI companion"
           >
             ♡
           </div>
@@ -64,8 +63,6 @@ export default function Home() {
             padding: "28px 22px",
             marginTop: "10px",
             textAlign: "center",
-            overflow: "hidden",
-            position: "relative",
           }}
         >
           <div
@@ -79,7 +76,6 @@ export default function Home() {
               background: "linear-gradient(135deg, #FF4F9A, #8B5CF6)",
               color: "#ffffff",
               fontSize: "54px",
-              boxShadow: "0 18px 40px rgba(139, 92, 246, 0.22)",
             }}
           >
             ♡
@@ -89,13 +85,7 @@ export default function Home() {
             Meet your AI companion
           </h1>
 
-          <p
-            style={{
-              maxWidth: "520px",
-              margin: "12px auto 0",
-              fontSize: "15px",
-            }}
-          >
+          <p style={{ marginTop: "12px", fontSize: "15px" }}>
             Chat, talk, and spend time with a friendly AI companion
             designed to feel natural and personal.
           </p>
@@ -170,31 +160,6 @@ export default function Home() {
             Your conversations and preferences can become more personal
             as the app grows.
           </p>
-
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "10px",
-              marginTop: "18px",
-              padding: "12px 14px",
-              borderRadius: "14px",
-              background: "rgba(255, 79, 154, 0.07)",
-            }}
-          >
-            <span
-              style={{
-                width: "10px",
-                height: "10px",
-                borderRadius: "50%",
-                background: "#22C55E",
-              }}
-            />
-
-            <span style={{ fontSize: "14px", fontWeight: 500 }}>
-              Ready to chat
-            </span>
-          </div>
         </section>
 
         <nav
@@ -220,7 +185,6 @@ export default function Home() {
                 key={item.id}
                 type="button"
                 onClick={() => setActiveTab(item.id)}
-                aria-current={isActive ? "page" : undefined}
                 style={{
                   minHeight: "58px",
                   borderRadius: "14px",
@@ -233,10 +197,9 @@ export default function Home() {
                   alignItems: "center",
                   justifyContent: "center",
                   gap: "3px",
-                  transition: "all 0.2s ease",
                 }}
               >
-                <span style={{ fontSize: "20px", lineHeight: 1 }}>
+                <span style={{ fontSize: "20px" }}>
                   {item.icon}
                 </span>
 
@@ -256,3 +219,4 @@ export default function Home() {
     </main>
   );
 }
+EOF
