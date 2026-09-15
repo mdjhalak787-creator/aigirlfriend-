@@ -1,4 +1,3 @@
-cat > app/page.tsx <<'EOF'
 "use client";
 
 import { useState } from "react";
@@ -48,7 +47,8 @@ export default function Home() {
               borderRadius: "50%",
               display: "grid",
               placeItems: "center",
-              background: "linear-gradient(135deg, #FF4F9A, #8B5CF6)",
+              background:
+                "linear-gradient(135deg, #FF4F9A, #8B5CF6)",
               color: "#ffffff",
               fontSize: "22px",
             }}
@@ -73,7 +73,8 @@ export default function Home() {
               borderRadius: "32px",
               display: "grid",
               placeItems: "center",
-              background: "linear-gradient(135deg, #FF4F9A, #8B5CF6)",
+              background:
+                "linear-gradient(135deg, #FF4F9A, #8B5CF6)",
               color: "#ffffff",
               fontSize: "54px",
             }}
@@ -85,7 +86,12 @@ export default function Home() {
             Meet your AI companion
           </h1>
 
-          <p style={{ marginTop: "12px", fontSize: "15px" }}>
+          <p
+            style={{
+              marginTop: "12px",
+              fontSize: "15px",
+            }}
+          >
             Chat, talk, and spend time with a friendly AI companion
             designed to feel natural and personal.
           </p>
@@ -107,7 +113,8 @@ export default function Home() {
         <section
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+            gridTemplateColumns:
+              "repeat(2, minmax(0, 1fr))",
             gap: "12px",
             marginTop: "16px",
           }}
@@ -122,9 +129,23 @@ export default function Home() {
               color: "var(--foreground)",
             }}
           >
-            <div style={{ fontSize: "28px", marginBottom: "8px" }}>♡</div>
+            <div
+              style={{
+                fontSize: "28px",
+                marginBottom: "8px",
+              }}
+            >
+              ♡
+            </div>
+
             <strong>Chat</strong>
-            <p style={{ fontSize: "13px", marginTop: "4px" }}>
+
+            <p
+              style={{
+                fontSize: "13px",
+                marginTop: "4px",
+              }}
+            >
               Have a conversation
             </p>
           </button>
@@ -139,9 +160,23 @@ export default function Home() {
               color: "var(--foreground)",
             }}
           >
-            <div style={{ fontSize: "28px", marginBottom: "8px" }}>◉</div>
+            <div
+              style={{
+                fontSize: "28px",
+                marginBottom: "8px",
+              }}
+            >
+              ◉
+            </div>
+
             <strong>Voice</strong>
-            <p style={{ fontSize: "13px", marginTop: "4px" }}>
+
+            <p
+              style={{
+                fontSize: "13px",
+                marginTop: "4px",
+              }}
+            >
               Talk naturally
             </p>
           </button>
@@ -154,11 +189,18 @@ export default function Home() {
             padding: "20px",
           }}
         >
-          <h2 style={{ fontSize: "20px" }}>Your companion</h2>
+          <h2 style={{ fontSize: "20px" }}>
+            Your companion
+          </h2>
 
-          <p style={{ marginTop: "8px", fontSize: "14px" }}>
-            Your conversations and preferences can become more personal
-            as the app grows.
+          <p
+            style={{
+              marginTop: "8px",
+              fontSize: "14px",
+            }}
+          >
+            Your conversations and preferences can become
+            more personal as the app grows.
           </p>
         </section>
 
@@ -170,7 +212,8 @@ export default function Home() {
             bottom: "16px",
             zIndex: 20,
             display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
+            gridTemplateColumns:
+              "repeat(4, 1fr)",
             gap: "4px",
             marginTop: "24px",
             padding: "8px",
@@ -178,20 +221,25 @@ export default function Home() {
           }}
         >
           {navigationItems.map((item) => {
-            const isActive = activeTab === item.id;
+            const isActive =
+              activeTab === item.id;
 
             return (
               <button
                 key={item.id}
                 type="button"
-                onClick={() => setActiveTab(item.id)}
+                onClick={() =>
+                  setActiveTab(item.id)
+                }
                 style={{
                   minHeight: "58px",
                   borderRadius: "14px",
                   background: isActive
                     ? "linear-gradient(135deg, #FF4F9A, #8B5CF6)"
                     : "transparent",
-                  color: isActive ? "#ffffff" : "var(--muted)",
+                  color: isActive
+                    ? "#ffffff"
+                    : "var(--muted)",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -199,7 +247,11 @@ export default function Home() {
                   gap: "3px",
                 }}
               >
-                <span style={{ fontSize: "20px" }}>
+                <span
+                  style={{
+                    fontSize: "20px",
+                  }}
+                >
                   {item.icon}
                 </span>
 
@@ -219,4 +271,3 @@ export default function Home() {
     </main>
   );
 }
-EOF
